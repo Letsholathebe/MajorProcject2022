@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./Assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+<link rel="stylesheet" href="./Assets/css/style.css">
+
+</head>
+
+<body >
+ <header>
+  <form action="https://formspree.io/f/xnqwvnjd" method="post">
+    <label for="email">Your Email</label>
+    <input name="Email" id="email" type="email">
+    <button type="submit">Submit</button>
+  </form>
+   <!--logo here-->
+   <table id="headerTable">
+     <tr>
+       <td align="center">
+        <nav>
+          <img src="./Assets/images/logo.svg">
+        </nav>
+       </td>
+     </tr>
+   </table>
+ 
+ </header>
+
+ <main>
+<!--image here-->
+<table id="mainTable2">
+  <tr>
+    <td align="center">
+      <img class="image" src="./Assets/images/hero-mobile.jpg" >
+    </td>
+  </tr>
+</table>
+    <!--bio information here-->
+<table id="mainTable3" >
+  <tr>
+    <td align="center">
+      <dev class="Boxbio">
+        <h1><b>WE'RE</b><br><a> <strong>COMING<br>SOON</strong> </a></h1>
+        <p >
+            Hello fellow shoppers! We're currently building <br>
+            our new fashion store. Add your email below to <br>
+            stay up-to-date with announcements and our <br>
+                            launch deals.
+         </p>
+      </dev>
+    </td>
+  </tr>
+</table>
+<!--email here-->
+
+
+<form>
+  <p class="placeHolder">
+  <input id="text" placeholder="Email" type="text">
+  <button onclick="validate()" type="button">Submit</button></p>
+</form>
+ </main> 
+  <footer >
+
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Bafedile Letsholathebe</a>.
+      </p>
+   
+  </footer>
+  <script>
+    function validate()
+    {
+      var mail= document.getElementById("text").value
+      var regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{0,9})+$/;
+      if(regx.text(mail))
+      {
+        alert("Valid email address!");
+        return true;
+      }
+      else
+      {
+       alert("You have entered an invalid email address!");
+       return false;
+      }
+
+    }
+  </script>
+</body>
+</html>
